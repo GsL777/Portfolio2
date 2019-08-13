@@ -1,0 +1,43 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	==========================================
+		QUOTE POST FORMAT
+	==========================================
+*/
+
+.portfolio-format-quote {
+	.quote-content{
+		font-size: 42px;
+		font-weight: 100;
+		line-height: 1.3em;
+		letter-spacing: .04em;
+			&:before,
+			&:after{ /*before element always needs content:'';, display and position otherwide it will not work*/
+				content: '';
+				display: inline-block;
+				position: relative;
+				color: $light-grey;
+			}
+			&:before {
+				content: '"';
+				color: #333333;
+			}
+			&:after {
+				content: '"';
+				color: #333333;
+			}
+			@media (max-width: $xs) {
+				font-size: 20px;
+			}
+	}
+	.quote-author {
+		color: #898989;
+		font-size: 12px;
+		letter-spacing: .06em;
+	}
+}

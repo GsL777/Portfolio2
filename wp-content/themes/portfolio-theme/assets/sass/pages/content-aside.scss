@@ -1,0 +1,43 @@
+/*
+
+@package portfolio-theme
+
+	==========================================
+		ASIDE POST FORMAT
+	==========================================
+
+*/
+
+.portfolio-format-aside {
+	.aside-container {
+		background-color: rgba(0,0,0,.075);
+		padding-top: 20px;
+	}
+	
+	.aside-featured {
+		height: 230px;
+		width: 230px;
+		border-radius: 50%;
+		display: block;
+		position: relative;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+	}
+	.entry-meta {
+		margin-bottom: 5px;
+	}
+	.entry-excerpt {
+		margin-top: 0;
+		p {
+			font-size: 15px;
+		}
+	}
+	.entry-footer {
+		border-bottom: none;
+		background-color: rgba(0,0,0,.05);
+		padding-right: 10px;
+	}
+}
+

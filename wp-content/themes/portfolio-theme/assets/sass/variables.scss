@@ -1,0 +1,152 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+//Colours
+@mixin animate ($attr, $time){
+	-webkit-transition: $attr $time ease;
+	-moz-transition: $attr $time ease;
+	-ms-transition: $attr $time ease;
+	-o-transition: $attr $time ease;
+	transition: $attr $time ease;
+}
+
+@mixin transform( $val ) {
+    -webkit-transform: $val;
+    -moz-transform: $val;
+    -ms-transform: $val;
+    -o-transform: $val;
+    transform: $val;
+}
+//Fonts
+/*$icon-font : 'portfolio-icon';*/
+$body-font: 'Raleway', 'Helvetica Neue', 'Helvetica', Arial, Verdana, sans-serif, 'Playfair Display', serif, 'Roboto';
+
+//Font Icon
+/*@font-face {
+    font-family: 'portfolio-icon';
+    src:    url('../fonts/portfolio-icon.eot?dxcjr7');
+    src:    url('../fonts/portfolio-icon.eot?dxcjr7#iefix') format('embedded-opentype'),
+        url('../fonts/portfolio-icon.ttf?dxcjr7') format('truetype'),
+        url('../fonts/portfolio-icon.woff?dxcjr7') format('woff'),
+        url('../fonts/portfolio-icon.svg?dxcjr7#portfolio-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.portfolio-icon { 
+	font-family: $icon-font!important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.portfolio-audio:before { content: "\e800"; }
+.portfolio-chevron-left:before { content: "\e801"; }
+.portfolio-chevron-right:before { content: "\e802"; }
+.portfolio-close:before { content: "\e803"; }
+.portfolio-comment:before { content: "\e804"; }
+.portfolio-link:before { content: "\e805"; }
+.portfolio-loading:before { content: "\e806"; }
+.portfolio-logo:before { content: "\e807"; }
+.portfolio-menu:before { content: "\e808"; }
+.portfolio-pencil:before { content: "\e809"; }
+.portfolio-pics:before { content: "\e80a"; }
+.portfolio-search:before { content: "\e80b"; }
+.portfolio-share:before { content: "\e80c"; }
+.portfolio-tag:before { content: "\e80d"; }
+.portfolio-video:before { content: "\e80e"; }
+*/
+//Variables
+$primary-color: #000000;
+$dark-grey: #333333;
+$grey: #656565;
+$grey2: #CBCBCB;
+$light-grey: #898989;
+$lighter-grey: #f1f1f1;
+$orange-red: #992900;
+$red-hover: #fc3514;
+
+//Placeholder
+%text-shadow {
+	text-shadow: 0px 1px 2px rgba(0,0,0,.4);
+} 
+/*%declarations that could be included writing (@extend %text-shadow;). PLACEHOLDER MUST BE AT THE BEGINNING OF A CLASS*/
+
+%background-gradient {
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+/*@-webkit-keyframes rotating  { Safari and Chrome 
+  from {
+    -webkit-transform: rotate(0deg);// Safari 4+
+    -o-transform: rotate(0deg); //Opera 12+
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);// Safari 4+
+    -o-transform: rotate(360deg); //Opera 12+
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg); // Fx 5+
+    -webkit-transform: rotate(0deg); // Safari 4+
+    -o-transform: rotate(0deg); //Opera 12+
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg); // Fx 5+
+    -webkit-transform: rotate(360deg); // Safari 4+
+    -o-transform: rotate(360deg); //Opera 12+
+    transform: rotate(360deg);
+  }
+}*/
+
+@mixin fullwidth(){
+  width: 100%;
+  height: auto;
+} /*include to global.scss .aligncenter, div.aligncenter an to a img.aligncenter*/
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/*Media Queries*/
+
+/*$xs: 767px; for mobiles*/
+
+$xs: 575px; /*Extra small devices (portrait phones, less than 576px)*/
+
+$sm: 767px; /* Small devices (landscape phones, less than 768px)*/
+
+$md: 991px; /* Medium devices (tablets, less than 992px)*/
+
+$lg: 1199px; /* Large devices (desktops, less than 1200px)*/
+

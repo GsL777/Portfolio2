@@ -1,0 +1,59 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	==========================================
+		IMAGE POST FORMAT
+	==========================================
+*/
+
+.portfolio-format-image {
+	.entry-header {
+		@extend %text-shadow;
+		height: 600px;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	/*@media (max-width: $xs) {
+		height: 220px;
+	}*/
+	h1,
+	.entry-meta,
+	.entry-header {
+		color: $dark-grey;
+		a {
+			/*color: $dark-grey;*/
+		}
+	}
+	h1{
+		padding-top: 20px;
+	}
+}
+
+.entry-excerpt {
+	&.image-caption {
+		position: relative;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		height: 80%;
+		p {
+			/*margin: 20px 0;*/
+			margin: 50px 0;
+			font-size: 14px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			color: #fff;
+			/*color: $light-grey;*/
+			
+				
+			
+		}
+	}
+}

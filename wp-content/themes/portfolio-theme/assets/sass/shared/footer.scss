@@ -1,0 +1,141 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+=====================================
+	FOOTER SECTION
+=====================================
+*/
+
+
+.portfolio-footer {
+	background: #292929;
+	a{
+		&:focus,
+		&:hover {
+			color: #ff9d1d;
+		}
+	}
+}
+
+.logo-footer {
+	margin-bottom: 40px;
+}
+.portfolio-footer-theme {
+	padding: 3rem 0;
+	margin-top: 1rem;
+    color: grey;
+    p, a {
+		font-size: 12px;
+		font-family: 'Roboto', sans-serif;
+	}
+	h6 {
+    	font-family: 'Playfair Display', serif;
+    	margin-bottom: 40px;
+    	position: relative;
+    	&:after {
+		    position: absolute;
+		    content: "";
+		    background: grey;
+		    width: 12%;
+		    height: 1px;
+		    left: 0;
+		    bottom: -20px;
+		}
+	}
+	ul,
+	li {
+		list-style: none;
+		display: block;
+	}
+	ul:nth-child(1) {
+		padding-left: 0;
+		li{
+			a{
+				text-decoration: none;
+				color: grey;
+				text-decoration:none;
+				&:hover,
+				&:focus{
+					text-decoration: none;
+					/*color: #f5f5f5;*/
+					color: #ff9d1d;
+				}
+			}
+		}
+	}
+
+}
+
+.btn-footer {
+	color: grey;
+	text-decoration: none;
+	border: 1px solid;
+	border-radius: 43px;
+	font-size: 13px;
+	padding: 7px 30px;
+	line-height: 47px;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+
+.portfolio-social {
+	ul{
+		@include flexbox();
+		 -webkit-flex-flow: row wrap;
+		li{
+			margin-right: 5px;
+			a{
+				i {
+					color: #fff;
+					font-size: 22px;
+					padding: 10px 15px;
+					margin-top: 4px;
+					background: #3c3c3c;
+				}
+				.facebook-icon {
+					&:hover,
+					&:focus {
+						color: #fff;
+						background-color: #3d5b99;
+					}
+				}
+				.linkedin-icon {
+					&:hover,
+					&:focus {
+						color: #fff;
+						transition: #fff 150ms ease-in-out;
+						background-color: #007bb6;
+					}
+				}
+				.github-icon {
+					&:hover,
+					&:focus {
+						color: #fff;
+						transition: #fff 150ms ease-in-out;
+						background-color: #444;
+					}
+				}
+				.email-icon {
+					&:hover,
+					&:focus {
+						color: #fff;
+						background-color: #333;
+					}
+				}
+			}
+		}
+		
+	}
+	
+}	
+
+.logo-part {
+	border-right: 1px solid grey;
+	height: 100%;
+}

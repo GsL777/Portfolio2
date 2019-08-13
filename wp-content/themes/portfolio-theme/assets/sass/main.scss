@@ -1,0 +1,176 @@
+/*
+	@package portfolio-theme
+*/
+
+// Project variables
+@import 'variables';
+
+// global styles
+@import 'global';
+
+// shared components
+@import 'shared/widgets';
+@import 'shared/header';
+@import 'shared/navbar';
+@import 'shared/footer';
+
+// page specific styles
+
+@import 'pages/sidebar';
+@import 'pages/single';
+@import 'pages/index';
+
+@import 'pages/content';
+@import 'pages/content-image';
+@import 'pages/content-gallery';
+@import 'pages/content-quote';
+@import 'pages/content-link';
+@import 'pages/content-aside';
+
+@import 'pages/content-resume';
+
+@import 'pages/page-projects-template';
+@import 'pages/content-archive-projects';
+
+// Other styles
+
+/*
+=====================================
+	GENERIC
+=====================================
+*/
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	/*background: #00FF00;*/
+	/*background:#000000;*/
+	font: sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $body-font;
+	&.no-scroll{
+		overflow-y: hidden;
+	}
+}
+
+a {
+	color: $grey;
+	@include animate(color, 320ms);
+	&:hover,
+	&:focus{
+		text-decoration: none;/*Takes off all the text underline */
+		color: $dark-grey;
+	}
+} 
+
+.container-size-option {
+	.row {
+		.screen-fit1 {
+			width: 100%;
+		}
+	}
+}
+
+
+
+/*Contact form*/
+
+.portfolio-contact-form {
+	padding: 40px 0;
+	max-width: 500px;
+	width: 100%;
+	margin: 0 auto;
+	.form-group {
+		margin-bottom: 30px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			display: block;
+			content: '';
+
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 2px;
+			background-color: $grey2;
+
+		}
+		.form-control-msg {
+			text-transform: uppercase;
+			font-size: 10px;
+			font-weight: 500;
+		}
+		&.has-error{
+			&:before {
+				background-color: #A94442;
+
+			}
+		}
+	}
+}
+
+.portfolio-form-control {
+	resize: vertical;/*message section - could be resized just vertical, but not horizontal*/
+	border: none;
+	border-radius: 0;
+	padding: 8px 15px;
+	outline: none;
+	box-shadow: none!important;
+	-webkit-box-shadow: none!important;
+
+	&::-webkit-input-placeholder {
+		text-transform: uppercase;
+	}
+	&::-moz-placeholder {
+		text-transform: uppercase;
+	}
+	&:-ms-placeholder {
+		text-transform: uppercase;
+	}
+	&:-moz-input-placeholder {
+		text-transform: uppercase;
+	}
+	&:hover,
+	&:focus,
+	&:active{
+		box-shadow: none;
+	}
+}
+
+.btn-portfolio-form {
+	background-color: $dark-grey;
+	border-radius: 2px;
+	font-size: 26px;
+	padding: 14px 60px;
+	color: #fff;
+	font-weight: 100;
+	border: none;
+	&:hover,
+	&:focus{
+		@include animate(all, 320ms);
+		background-color: $light-grey;
+	}
+}
+
+.form-control-msg {
+	display: none;
+}
+
+.has-error {
+	.form-control-msg {
+		display: block;
+	}
+	.form-control{
+		border-color: #ff0000;
+	}
+}
+
+.js-show-feedback {
+	display: block;
+}

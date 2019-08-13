@@ -1,0 +1,99 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+=====================================
+	INDEX CONTENT index.php
+=====================================
+*/
+
+article {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	/*&:first-child{
+		padding-top: 80px;
+	}*/
+	@media (max-width: $xs) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+.portfolio-posts-container {
+	padding-top: 40px;
+	article {
+		@include animate( all, 320ms );
+		@include transform( translateY(100px) );
+		opacity: 0;
+		
+		&.reveal {
+			@include transform( translateY(0) );
+			opacity: 1;
+		}
+	}
+
+}
+
+
+.flow-direction {
+	flex-flow: column;
+}
+
+/*
+=====================================
+	AJAX LOADING
+=====================================
+*/
+.container-load-previous {
+	margin-top: 40px;
+	margin-bottom: -40px;
+}
+
+.btn-portfolio-load {
+	display: block;
+	width: 200px;
+	color: #222;
+	font-size: 30px;
+	margin: 0 auto;
+	cursor: pointer;
+	opacity: .5;
+	@include animate(opacity, 320ms);
+		&:hover,
+		&:focus,
+		&.loading { /*if the .btn-portfolio-load button has the class .loading applied, it will use the code {} */
+			opacity: 1;
+		}
+		&.loading {
+			cursor: default;
+		}
+	span {
+		display: block;
+	}
+
+	.dashicons {
+		display: block;
+		margin: 0 auto;
+		/*width: 30px;
+		height: 25px;
+		padding-top: 12px;
+		.icon-flipped {
+			@include transform(scaleX(-1));
+		}
+		*/
+	}
+}
+
+
+.spin { /*spin animation from variables.scss*/
+	animation-name: spin;
+	animation-duration: 1000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+
+
+

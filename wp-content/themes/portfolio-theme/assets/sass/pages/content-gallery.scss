@@ -1,0 +1,112 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	==========================================
+		GALLERY POST FORMAT
+	==========================================
+*/
+
+.portfolio-format-gallery {/*post_class in content-gallery.php file*/
+	header {
+		h1 {
+			&.entry-title {
+				margin-top: 20px;
+			}
+		}
+	}
+	.standard-featured2 {
+	height: 500px;
+	width: 100%;
+	/*background-size: auto 600px;*/
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+		/*&:after {
+			background-color: transparent;
+		}*/
+		@media (max-width: $xs) {
+			height: 200px;
+		}
+	}
+	/*carousel styling*/
+	.carousel-control {
+		@extend %text-shadow;
+		background: none;
+		background-image: none;
+		opacity: 1;
+		filter: alpha(opacity=100);
+		font-size: 30px;
+		width: auto;
+		.preview-container {
+			position: relative;
+			display: block;
+			padding: 20px;
+			background-color: rgba(0,0,0,0);
+			line-height: 0;/*everything will be as big as actual content*/
+			@include animate(background-color, 320ms);/*animation for a photo between the arrows*/
+			.thumbnail-container {/*for photo between arrows*/
+				
+					position: absolute;
+					display: block;
+					height: 58px;
+					width: 58px;
+					border-radius: 50%;
+					background: #999;
+					top: 1px;
+					@include animate(transform, 320ms);/*animation for a photo between the arrows*/
+					@include transform(scale(0));/*animation for a photo between the arrows*/
+			}
+		}
+		&.left {/*that means if carousel-control class has a class of right than it will put the style*/
+			.preview-container {/*for photo between arrows*/
+				padding-right: 80px;
+				border-radius: 0 35.5px 35.5px 0;
+				.thumbnail-container {
+					left: 61px;
+				}
+			}
+		}
+		&.right {/*that means if carousel-control class has a class of right than it will put the style*/
+			.preview-container {/*for photo between arrows*/
+				padding-left: 80px;
+				border-radius: 35.5px 0 0 35.5px;
+				.thumbnail-container {
+					right: 61px;
+				}
+			}
+		}
+
+		&:hover/*hover used for when user hovers with the mouse on the top*/
+			{/*focus used for when user hovers with the TAB button on the top*/
+			.preview-container {
+				background-color: rgba(0,0,0,.8);
+				.thumbnail-container {
+					@include transform(scale(1));
+				}
+			}
+		}
+	}
+	.entry-excerpt {
+		&.image-caption {
+			@include animate(transform, 320ms);
+			@include transform(translateY(100%));
+		}
+	}
+	&:hover {
+		.entry-excerpt {
+			&.image-caption {
+				@include transform(translateY(0));
+				p{
+					@extend %background-gradient;
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+
+
+}

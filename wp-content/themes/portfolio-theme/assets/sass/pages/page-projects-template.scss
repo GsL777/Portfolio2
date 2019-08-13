@@ -1,0 +1,31 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	=====================================
+		PAGE PROJECTS TEMPLATE CONTENT page-projects-template.php
+	=====================================
+*/
+
+
+.site-main {
+	text-align: center;
+	padding-top: 40px;
+	.entry-title {
+		padding-bottom: 1em;
+	}
+	.section {
+		display: flex;
+		.section1 {
+			justify-content: center;
+		}
+	}
+	.resume-section {
+		display: flex;
+		justify-content: center;
+	}
+}
+

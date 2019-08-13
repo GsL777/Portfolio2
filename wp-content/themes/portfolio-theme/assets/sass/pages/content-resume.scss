@@ -1,0 +1,69 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	==========================================
+		RESUME POST FORMAT
+	==========================================
+*/
+
+#services {
+	margin-top: 20px;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	margin-bottom: 45px;
+	h2 {
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	.developer-services {
+		display: flex;
+		margin-top: 20px;
+		.rotate {
+			-webkit-transition-duration: 0.8s;
+			transition-duration: 0.8s;
+			-webkit-transition-property: -webkit-transform;
+			transition-property: -webkit-transform;
+			transition-property: transform;
+			transition-property: transform, -webkit-transform;
+			overflow: hidden;
+			&:focus,
+			&:hover {
+				-webkit-transform: rotate(360deg);
+				-moz-transform: rotate(360deg);
+				-o-transform: rotate(360deg);
+			}
+			.fa {
+				font-size: 60px;
+				color: #F56B08;
+			}
+		}
+		h3 {
+			color: #656565;
+			font-size: 22px;
+			font-weight: bold;
+			text-transform: lowercase;
+		}
+	}
+}
+
+
+.portfolio-resume {
+	a {
+		border: 1px solid #898989;
+		padding: 8px 12px;
+		border-radius: 0;
+		text-transform: uppercase;
+		color: #F56B08;
+		&:focus,
+		&:hover {
+			color: #ff9d1d;
+			background-color: #333333;
+		}
+	}
+	
+}

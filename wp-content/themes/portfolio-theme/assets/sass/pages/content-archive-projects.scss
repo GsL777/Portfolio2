@@ -1,0 +1,69 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	===================================================================
+		CONTENT-ARCHIVE-PROJECTS CONTENT page-projects-template.php
+	===================================================================
+*/
+
+.cards {
+	padding: 0 1em;
+	.card {
+		padding: 0;
+		.card-body{
+			max-width: 265px;
+		}
+	}
+}
+
+.project-pics {
+	.columns {
+		@include flexbox();
+		/*flex-flow: row wrap;*/
+		flex-direction: column;
+		justify-content: space-around;
+		opacity: 0;
+		@include transform( translateX(-20px) );
+		transition: all 320ms ease-in-out;
+		/*padding-bottom: 20px;*/
+		.img {
+			height: 200px;
+			width: 200px;
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		&.is-showing{
+			opacity: 1;
+			@include transform( translateX(0px) );
+		}
+	}
+	
+}
+
+.standard-featured3 {
+	position: relative;
+	height: 180px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+	
+}
+
+.standard-featured-link {
+	overflow: hidden;
+	.standard-featured3 {
+		transform: scale(1);
+		transition: all 320ms ease-in-out;
+		
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}

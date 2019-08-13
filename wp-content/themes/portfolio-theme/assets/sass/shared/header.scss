@@ -1,0 +1,176 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+=====================================
+	HEADER
+=====================================
+*/
+
+.header-container {
+	@extend %text-shadow; /*
+	PLACEHOLDER MUST BE AT THE BEGINNING OF A CLASS
+	First parameter - define x basis. 
+	Second parameter - define y basis. 
+	Third parameter - bluriness (the more the pixels the sharper text will be).
+	text-shadow: ; - created a placeholder in variables.scss*/
+
+	position: relative;
+	/*display: block;
+	height: 326px;*/
+	height: 600px;
+	.apple {
+		width: 140px;
+		height: 140px;
+		/*background-color: transparentize(pink, .5);*/
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		position: absolute;
+		left: 90%;
+		margin-left: -100px;
+		top: 460px;
+
+		@media (max-width: $lg) {
+			display: none;
+		}
+	}
+
+
+	/*.pen {
+		width: 200px;
+		height: 150px;
+		/*background-color: transparentize(pink, .5);
+		background-repeat: no-repeat;
+		background-position: top left;
+		position: absolute;
+		left: 15%;
+		margin-left: -100px;
+	}*/
+
+}
+
+.background-image {
+	position: relative;
+	height: 600px;
+	/*background-size: auto 600px;*/
+	background-attachment: fixed;
+	/*overflow: hidden;*/
+
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.table {
+	display: table;
+	width: 100%;
+	height: 100%;
+
+	.table-cell {
+		display: table-cell;
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		/*position: absolute; TAKE OFF POSITION: ABSOLUTE IF GALLERY GLITCHES*/
+		top: 50%;
+		margin-top: -50px;/**/
+	}
+}
+
+
+.site-title {
+	color: #eac4c4;
+	padding-top: 1em;
+	margin: 0;
+}
+
+.site-description {
+	font-size: 14px;
+	color: #fff;
+	margin-top: 1em;
+}
+
+.nav-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/**/
+
+
+
+/* Scroll Down Indicator START */
+
+.mouse-warp {
+	margin: 40px auto;
+	display: block;
+	width: 28px;
+	opacity: 0.5;
+}
+
+.mouse {
+	width: 28px;
+	height: 50px;
+	border: 2px solid #fff;
+	border-radius: 14px;
+}
+
+.scroll {
+	width: 4px;
+	height: 4px;
+	border-radius: 2px;
+	background: #fff;
+	position: relative;
+	left: 10px;
+	-webkit-animation: scrolls 1.3s ease-out infinite;
+}
+
+@-webkit-keyframes scrolls {
+	0% {
+		top: 8px;
+		opacity: 0;
+		-webkit-transform: scaleY(1) scaleX(1);
+	}
+	5% {
+		top: 8px;
+		opacity: 0.8;
+		-webkit-transform: scaleY(1.2) scaleX(1.2);
+	}
+	10% {
+		top: 8px;
+		opacity: 1;
+		-webkit-transform: scaleY(1.6) scaleX(1.6);
+	}
+	15% {
+		top: 8px;
+		opacity: 1;
+		-webkit-transform: scaleY(1.2) scaleX(1.2);
+	}
+	20% {
+		top: 8px;
+		opacity: 1;
+		-webkit-transform: scaleY(1.2) scaleX(1.2);
+	}
+	30% {
+		top: 15px;
+		opacity: 1;
+		-webkit-transform: scaleY(1.2) scaleX(1.2);
+	}
+	100% {
+		top: 30px;
+		opacity: 0;
+		-webkit-transform: scaleY(1.2) scaleX(0.8);
+	}
+}
+
+/* Scroll Down Indicator START*/
+
+

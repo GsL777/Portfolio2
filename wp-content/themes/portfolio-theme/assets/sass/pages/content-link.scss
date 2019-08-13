@@ -1,0 +1,56 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	==========================================
+		LINK POST FORMAT
+	==========================================
+*/
+
+.portfolio-format-link {
+	h1{
+		&.entry-title {
+			&:before,
+			&:after {
+				display: none;
+			}
+			a {
+				display: block;
+			}
+			.link-icon {
+				display: block;
+				color: #fff;
+				font-size: 30px;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: rgba(0,0,0,.6);
+				margin: 0 auto;
+				/*padding-top: 10px;*/
+				
+			}
+
+		}
+		.dashicons {
+				font-size: 40px;
+				margin: 6px 20px 0 0;
+				/*position: relative;
+				bottom: 7px;
+
+				margin: 8px 20px 8px 6px;*/
+				width: 50px;
+				height: 50px;
+				align-items: center;
+				display: flex;
+				justify-content: center;
+			&:before {
+				font-size: 40px;
+				margin: 6px 20px 0 0;
+			}
+		}
+
+	}
+} /*!!!praeiti 15 live session kur paaiskina kaip susikurti ir stilizuoti savo dashicons*/

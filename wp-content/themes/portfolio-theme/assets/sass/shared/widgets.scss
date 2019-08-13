@@ -1,0 +1,56 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	=====================================
+		WIDGETS SECTION
+	=====================================
+*/
+
+.portfolio-widget {
+	margin: 20px 0 40px;
+	padding: 0 20px;
+	ul {
+		list-style: none;
+		padding:0;
+		margin: 0;
+	}
+	li{
+		display: block;
+		color: #bababa;
+		padding: 2px 9px;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+
+h2.portfolio-widget-title{ /*if h2 tag has .portfolio-widget-title claass and default h2 tags is not overwritten!*/
+	display: block;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 300;
+	background-color: #303030;
+	padding: 5px;
+	border-radius: 20px;
+	line-height: 1em;
+	letter-spacing: .2px;
+}
+
+/*Tags Gloud Widget*/
+.tagcloud {
+	text-align: center;
+	a {
+		display: inline-block;
+		background-color: #7D7D7D;
+		padding: 1px 9px;
+		border-radius: 10px;
+		color: #eee;
+	}
+}
+

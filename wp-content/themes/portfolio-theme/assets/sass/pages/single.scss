@@ -1,0 +1,83 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+/*
+	=====================================
+		SINGLE CONTENT single.php
+	=====================================
+*/
+
+.entry-content {
+	margin-top: 40px;
+	font-size: 18px;
+	letter-spacing: .02em;
+	font-weight: 300;
+	line-height: 1.7em;
+	a,
+	.portfolio-tooltip,
+	.portfolio-popover{
+		cursor: pointer;
+		color: #F56B08;
+		&:hover,
+		&:focus {
+			color: #ff9d1d;
+		}
+	}
+	p {
+		margin-bottom: 15px;
+	}
+
+	b,
+	strong {
+		font-weight: 500;
+	}
+}
+
+.post-link-nav {
+	padding: 10px 0;
+
+	a{
+		padding: 0 5px;
+		color: #F56B08;
+		&:hover,
+		&:focus {
+			color: #ff9d1d;
+		}
+	}
+}
+
+/*
+	====================================================
+		SINGLE-PROJECTS CONTENT single-projects.php
+	====================================================
+*/
+
+.site-main {
+	.section {
+		display: flex;
+		justify-content: center;
+		padding-top: 0;
+		article {
+			padding-top: 0;
+			.entry-title {
+				padding-bottom: 1em;
+			}
+			.img-container img {
+				width: 500px;
+				height: auto;
+			}
+			
+		}
+	}
+}
+
+		
+.post-navigation { /*class in theme-support.php portfolio_post_navigation function*/
+	display: -webkit-flex; /* Safari */
+	-webkit-flex-flow: row nowrap; /* Safari 6.1+ */
+	display: flex;
+	flex-flow: row nowrap;
+}

@@ -1,0 +1,88 @@
+/*
+	@package portfolio-theme
+*/
+
+/*CSS for portfolio-admin.php*/
+#wpcontent {
+	font-family: "Raleway", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif, "Playfair Display", serif, "Roboto";
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5,
+.form-table th,
+.form-wrap label {
+	font-weight: 500;
+}
+
+.portfolio-general-form,
+.portfolio-sidebar-preview {
+	display: inline-block;
+	float: left;
+}
+
+.portfolio-sidebar-preview {
+	width: 280px;
+	background-color: #1F1F1F;
+	padding: 20px;
+	text-align: center;
+	margin-right: 20px;
+}
+
+.portfolio-sidebar {
+	display: block;
+	text-align: center;
+}
+
+h1.portfolio-username,
+h2.portfolio-description {
+	font-weight: 100;
+	color: #fff;
+}
+
+h1.portfolio-username {
+	font-size: 24px;
+	margin: 0 0 10px;
+}
+
+h2.portfolio-description {
+	font-size: 15px;
+	margin: 0 0 20px;
+}
+
+.portfolio-icon-sidebar--facebook {
+	margin-left: 8px;
+	color: #fff;
+}
+
+.dashicons-facebook-alt::before {
+    background-color: #3b5998;
+    border-radius: 2px;
+}
+
+.portfolio-icon-button:before {
+	margin: 4px 3px 0 -3px;
+}
+
+.image-container {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+}
+
+.profile-picture {
+	width: 122px;
+	height:122px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 20px auto;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*.profile-picture img {
+	width: 100%;
+	height: auto;
+}*/

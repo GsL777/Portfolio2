@@ -1,0 +1,31 @@
+/*
+
+	@package portfolio-theme
+
+*/
+
+.project-pics {
+	.columns {
+		@include flexbox();
+		flex-flow: row wrap;
+		justify-content: space-around;
+		opacity: 0;
+		@include transform( translateX(-20px) );
+		transition: all 320ms ease-in-out;
+		padding-bottom: 20px;
+		.img {
+			height: 200px;
+			width: 200px;
+			background-position: center center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			
+		}
+
+		&.is-showing{
+			opacity: 1;
+			@include transform( translateX(0px) );
+		}
+	}
+	
+}
